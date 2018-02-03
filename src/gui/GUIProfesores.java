@@ -14,7 +14,7 @@ import java.util.ArrayList;
 import java.util.List;
 import javax.swing.JOptionPane;
 import service.EntidadService;
-import util.AgeException;
+import util.InvalidDataProfesorException;
 
 /**
  *
@@ -450,9 +450,9 @@ public class GUIProfesores extends javax.swing.JFrame {
                 }
             }
             else{
-                throw new AgeException("No cumple con la edad minima para ser profesor, debe tener 18 o más años");
+                throw new InvalidDataProfesorException("No cumple con la edad minima para ser profesor, debe tener 18 o más años");
             }
-        } catch (AgeException ex) {
+        } catch (InvalidDataProfesorException ex) {
             System.out.println(ex.getMessage());
             JOptionPane.showMessageDialog(null, ex.getMessage());
         }

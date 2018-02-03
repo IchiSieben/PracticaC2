@@ -9,8 +9,8 @@ package util;
  *
  * @author DesktopN°1
  */
-public class AgeException extends Exception{
-       public AgeException (String message) {
+public class InvalidDataProfesorException extends Exception{
+       public InvalidDataProfesorException (String message) {
         super(message);
     }
 }
